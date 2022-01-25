@@ -9,9 +9,11 @@ import java.io.File;
  */
 public class ImageShredder
 {
-	public static void main(){
+	public static void main()throws Exception{
 		String args = "Shred_input/ugly.png";
-		shredUpright
+		shredUpright(args, 16);
+		shredSideways(args, 16);
+		crop(args, 16,16);
 	}
     static BufferedImage source;
     public static void shredUpright(String args, int width) throws Exception{
